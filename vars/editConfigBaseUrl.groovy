@@ -5,7 +5,7 @@
 **/
 def call(String baseUrl) {
     def config = readYaml(file:"_config.yml")
-    config['baseurl'] = "/ind"
+    config['baseurl'] = baseUrl
     sh "rm _config.yml"
     writeYaml(file:"_config.yml", data:config)
 }
